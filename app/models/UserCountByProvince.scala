@@ -6,6 +6,7 @@ import models.SparkCommons._
 
 case class UserCountByProvince(count: Long, province: String)
 
+
 //@Inject()(db: Database)
 object UserCountByProvinceDao {
   def query() = {
@@ -14,5 +15,4 @@ object UserCountByProvinceDao {
       map(f => new UserCountByProvince(f.getAs("count"), f.getAs("province"))).collect().toList
     res
   }
-
 }

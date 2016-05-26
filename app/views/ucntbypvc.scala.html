@@ -1,0 +1,14 @@
+@(data: List[UserCountByProvince])
+<table>
+    <tr>
+        <th>Province</th>
+        <th>Count</th>
+    </tr>
+    @for(p <- data){
+        <tr>
+            <td>@p.province</td>
+            <td>@p.count</td>
+        </tr>
+    }
+</table>
+
