@@ -12,6 +12,5 @@ object SparkCommons {
 
   lazy val sc = SparkContext.getOrCreate(conf)
   lazy val sqlContext = new SQLContext(sc)
-  val url = "jdbc:mysql://localhost:3306/cnmooc"
   val query_url = "jdbc:mysql://localhost:3306/cnmooc?useUnicode=true&characterEncoding=GBK&user=root&password=1234"
 }
